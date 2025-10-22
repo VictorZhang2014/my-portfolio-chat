@@ -16,7 +16,7 @@ export const translations = {
   },
   fr: {
     title: "M. QiangZhang",
-    subtitle: "Posez-moi des questions sur mon CV d'ici",
+    subtitle: "Posez-moi des questions sur mon CV ici",
     greeting:
       "Bonjour ! 👋 Je suis Qiang Zhang. Je peux vous parler de mon expérience professionnelle, de ma formation, de mes compétences, de mes projets, de mon travail préféré et plus encore. Que souhaitez-vous savoir ?",
     inputPlaceholder: "Posez-moi des questions sur mon expérience, compétences, projets...",

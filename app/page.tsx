@@ -93,10 +93,10 @@ export default function Home() {
       experience:
         language === "en" ? "Tell me about your work experience" : "Pouvez-vous me parler de votre expérience professionnelle",
       skills: language === "en" ? "What are your skills?" : "Quelles sont tes compétences techniques?",
-      education: language === "en" ? "Tell me about your education" : "Pouvez-vous me dire quelle éducation vous avez faites ?",
+      education: language === "en" ? "Tell me about your education" : "Quelle formation avez-vous suivie ?",
       projects: language === "en" ? "Show me your projects" : "Est-ce que tu pourrais me montrer quelques-uns de tes projets ?",
-      contact: language === "en" ? "I want to contact you" : "J'aimerais te contacter",
-      summary: language === "en" ? "Tell me about yourself" : "Pouvez-vous me parler un peu de vous ?",
+      contact: language === "en" ? "I want to contact you" : "Je souhaiterais vous contacter",
+      summary: language === "en" ? "Tell me about yourself" : "Pourriez-vous me parler un peu de vous ?",
     }
     handleSendMessage(sectionQueries[section])
   }
@@ -142,6 +142,20 @@ export default function Home() {
         <div className="container mx-auto px-4 pt-3 max-w-4xl">
           <div className="mb-3 flex flex-wrap gap-2">
             <button
+              onClick={() => handleSectionClick("summary")}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+            >
+              <BookText className="w-4 h-4" />
+              <span className="text-sm font-medium">{language === "en" ? "Summary" : "Résumé"}</span>
+            </button>
+            <button
+              onClick={() => handleSectionClick("education")}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+            >
+              <GraduationCap className="w-4 h-4" />
+              <span className="text-sm font-medium">{language === "en" ? "Education" : "Éducation"}</span>
+            </button>
+            <button
               onClick={() => handleSectionClick("experience")}
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
             >
@@ -156,25 +170,11 @@ export default function Home() {
               <span className="text-sm font-medium">{language === "en" ? "Skills" : "Compétences"}</span>
             </button>
             <button
-              onClick={() => handleSectionClick("education")}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-            >
-              <GraduationCap className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "en" ? "Education" : "Éducation"}</span>
-            </button>
-            <button
               onClick={() => handleSectionClick("projects")}
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
             >
               <FolderOpen className="w-4 h-4" />
               <span className="text-sm font-medium">{language === "en" ? "Projects" : "Projets"}</span>
-            </button>
-            <button
-              onClick={() => handleSectionClick("summary")}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-            >
-              <BookText className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "en" ? "Summary" : "Résumé"}</span>
             </button>
             <button
               onClick={() => handleSectionClick("contact")}
