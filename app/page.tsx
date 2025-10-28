@@ -54,7 +54,6 @@ export default function Home() {
 
   const generateResponse = (query: string, lang: "en" | "fr"): string => {
     const data = portfolioData[lang]
-
     if (
       query.includes("experience") ||
       query.includes("work") ||
@@ -66,6 +65,7 @@ export default function Home() {
       query.includes("education") ||
       query.includes("study") ||
       query.includes("éducation") ||
+      query.toLocaleLowerCase().includes("quelle formation") ||
       query.includes("études")
     ) {
       return data.education
