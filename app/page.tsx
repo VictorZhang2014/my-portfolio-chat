@@ -146,7 +146,7 @@ export default function Home() {
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
             >
               <BookText className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "en" ? "Summary" : "Résumé"}</span>
+              <span className="text-sm font-medium">{language === "en" ? "Summary" : "Sommaire"}</span>
             </button>
             <button
               onClick={() => handleSectionClick("education")}
