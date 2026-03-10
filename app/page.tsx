@@ -39,6 +39,15 @@ export default function Home() {
     return () => clearTimeout(timer)
   }, [language, t.greeting])
 
+  useEffect(() => {
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => {
+        // data.country_code === "FR" ? setLanguage("fr") : setLanguage("en"); 
+        setLanguage("fr")
+      });
+  }, []);
+
   const handleSendMessage = async (message: string) => {
     const userMessage = { role: "user" as const, content: message, timestamp: new Date() }
     setMessages((prev) => [...prev, userMessage])

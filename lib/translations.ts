@@ -15,10 +15,10 @@ export const translations = {
       "That's an interesting question! You can ask me about my work experience, education, skills, projects, or how to contact me. What would you like to know?",
   },
   fr: {
-    title: "M. QiangZhang",
+    title: "M. Qiang (François) Zhang",
     subtitle: "Posez-moi des questions sur mon CV ici",
     greeting:
-      "Bonjour ! 👋 Je suis Qiang Zhang. Je peux vous parler de mon expérience professionnelle, de ma formation, de mes compétences, de mes projets, de mon travail préféré et plus encore. Que souhaitez-vous savoir ?",
+      "Bonjour ! 👋 Je suis Qiang (François) Zhang. Je peux vous parler de mon expérience professionnelle, de ma formation, de mes compétences, de mes projets, de mon travail préféré et plus encore. Que souhaitez-vous savoir ?",
     inputPlaceholder: "Posez-moi des questions sur mon expérience, compétences, projets...",
     quickPrompts: [
       "Parlez-moi de votre expérience",
