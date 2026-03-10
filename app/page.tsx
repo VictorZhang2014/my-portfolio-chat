@@ -43,8 +43,7 @@ export default function Home() {
     fetch("https://ipapi.co/json/")
       .then(res => res.json())
       .then(data => {
-        // data.country_code === "FR" ? setLanguage("fr") : setLanguage("en"); 
-        setLanguage("fr")
+        data.country_code === "FR" ? setLanguage("fr") : setLanguage("en"); 
       });
   }, []);
 
