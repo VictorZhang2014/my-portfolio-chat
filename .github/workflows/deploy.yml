@@ -16,7 +16,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10  # Or 'latest' if you prefer the newest version
+          version: 10
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile  # Use pnpm and respect lockfile
 
-      #- name: Lint code
-      #  run: pnpm run lint  # Run linting to catch issues early
+      # - name: Lint code
+      #   run: pnpm run lint  # Run linting to catch issues early
 
       - name: Build Next.js
         run: pnpm run build  # Builds and exports static files to 'out' directory
