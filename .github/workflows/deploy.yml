@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # Opt into Node.js 24 for actions to avoid deprecation warning
 
     steps:
       - name: Checkout repository
@@ -16,7 +18,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 8  # Or 'latest' if you prefer the newest version
+          version: 10  # Or 'latest' if you prefer the newest version
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
