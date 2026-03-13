@@ -14,14 +14,14 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v6
+        uses: pnpm/action-setup@v4
         with:
           version: 10  # Or 'latest' if you prefer the newest version
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 21
+          node-version: 22
           cache: 'pnpm'  # Enable pnpm caching for faster installs
 
       - name: Install dependencies
