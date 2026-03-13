@@ -51,4 +51,12 @@ jobs:
             --include "_next/*" \
             --include "index.html" \
             --include "index.txt" \
-            --include "404.html"
+            --include "404.html" \
+            --include "manifest.webmanifest" \
+            --include "service-worker.js"
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/_next/*" "/index.html" "/index.txt" "/404.html"
