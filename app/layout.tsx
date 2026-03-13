@@ -11,7 +11,11 @@ export const metadata: Metadata = {
   description: '',
   generator: '',
   manifest: "/manifest.json",
-  themeColor: "#000000"
+  themeColor: "#000000",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default"
+  }
 }
 
 export default function RootLayout({
@@ -34,6 +38,8 @@ export default function RootLayout({
             gtag('config', 'G-VFLZM8QTTE');
           `}
         </Script> 
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <ServiceWorkerRegister />
