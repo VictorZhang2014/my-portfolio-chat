@@ -1,14 +1,17 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Analytics } from '@vercel/analytics/next'
+// import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import Script from 'next/script'
+import ServiceWorkerRegister from "./service-worker"
 
 export const metadata: Metadata = {
   title: "Qiang Zhang CV",
   description: '',
   generator: '',
+  manifest: "/manifest.json",
+  themeColor: "#000000"
 }
 
 export default function RootLayout({
@@ -30,11 +33,12 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-VFLZM8QTTE');
           `}
-        </Script>
+        </Script> 
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+        <ServiceWorkerRegister />
         {children}
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   )
