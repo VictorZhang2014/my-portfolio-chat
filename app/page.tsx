@@ -115,14 +115,14 @@ export default function Home() {
 
       {/* Header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4 max-w-4xl flex items-center justify-between">
+        <div className="container mx-auto px-4 py-2 sm:py-4 max-w-4xl flex items-center justify-between">
           <div className="flex items-center gap-3">
             {/* <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
               <Sparkles className="w-5 h-5 text-primary-foreground" />
             </div> */}
             <div>
               <h1 className="text-lg font-semibold text-foreground">{t.title}</h1>
-              <p className="text-sm text-muted-foreground">{t.subtitle}</p>
+              <p className="text-sm text-muted-foreground sm:whitespace-normal whitespace-nowrap overflow-hidden text-ellipsis">{t.subtitle}</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -151,45 +151,45 @@ export default function Home() {
           <div className="mb-3 flex flex-wrap gap-2">
             <button
               onClick={() => handleSectionClick("summary")}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+              className="flex items-center gap-1 px-2 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-xs sm:gap-2 sm:px-4 sm:py-2 sm:text-sm transition-colors"
             >
-              <BookText className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "en" ? "Summary" : "Sommaire"}</span>
+              <BookText className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="text-[11px] sm:text-sm font-medium">{language === "en" ? "Summary" : "Sommaire"}</span>
             </button>
             <button
               onClick={() => handleSectionClick("education")}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+              className="flex items-center gap-1 px-2 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-xs sm:gap-2 sm:px-4 sm:py-2 sm:text-sm transition-colors"
             >
-              <GraduationCap className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "en" ? "Education" : "Éducation"}</span>
+              <GraduationCap className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="text-[11px] sm:text-sm font-medium">{language === "en" ? "Education" : "Éducation"}</span>
             </button>
             <button
               onClick={() => handleSectionClick("experience")}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+              className="flex items-center gap-1 px-2 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-xs sm:gap-2 sm:px-4 sm:py-2 sm:text-sm transition-colors"
             >
-              <Briefcase className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "en" ? "Experience" : "Expérience"}</span>
+              <Briefcase className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="text-[11px] sm:text-sm font-medium">{language === "en" ? "Experience" : "Expérience"}</span>
             </button>
             <button
               onClick={() => handleSectionClick("skills")}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+              className="flex items-center gap-1 px-2 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-xs sm:gap-2 sm:px-4 sm:py-2 sm:text-sm transition-colors"
             >
-              <Code className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "en" ? "Skills" : "Compétences"}</span>
+              <Code className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="text-[11px] sm:text-sm font-medium">{language === "en" ? "Skills" : "Compétences"}</span>
             </button>
             <button
               onClick={() => handleSectionClick("projects")}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+              className="flex items-center gap-1 px-2 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-xs sm:gap-2 sm:px-4 sm:py-2 sm:text-sm transition-colors"
             >
-              <FolderOpen className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "en" ? "Projects" : "Projets"}</span>
+              <FolderOpen className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="text-[11px] sm:text-sm font-medium">{language === "en" ? "Projects" : "Projets"}</span>
             </button>
             <button
               onClick={() => handleSectionClick("contact")}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+              className="flex items-center gap-1 px-2 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-xs sm:gap-2 sm:px-4 sm:py-2 sm:text-sm transition-colors"
             >
-              <Contact className="w-4 h-4" />
-              <span className="text-sm font-medium">{language === "en" ? "Contact" : "Contact"}</span>
+              <Contact className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="text-[11px] sm:text-sm font-medium">{language === "en" ? "Contact" : "Contact"}</span>
             </button>
           </div>
 

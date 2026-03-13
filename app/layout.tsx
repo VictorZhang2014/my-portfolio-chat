@@ -14,7 +14,8 @@ export const metadata: Metadata = {
   themeColor: "#000000",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default"
+    statusBarStyle: "default",
+    title: "Qiang Zhang CV"
   }
 }
 
